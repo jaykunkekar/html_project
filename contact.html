@@ -165,31 +165,6 @@
 }
 </style>
 
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Show success message
-    const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = 'Message Sent! ✓';
-    btn.disabled = true;
-    btn.style.background = 'white';
-    btn.style.color = 'var(--primary)';
-    
-    // Reset form
-    this.reset();
-    
-    // Reset button after 3 seconds
-    setTimeout(() => {
-        btn.textContent = originalText;
-        btn.disabled = false;
-        btn.style.background = '';
-        btn.style.color = '';
-    }, 3000);
-});
-</script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
